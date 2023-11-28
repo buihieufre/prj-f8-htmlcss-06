@@ -314,6 +314,8 @@ body {
 
 /* PROJECT */
 .project {
+    margin: auto;
+    max-width: 1980px;
     padding: 8.6rem 0;
     background: var(--primary-color);
 }
@@ -390,4 +392,226 @@ body {
     color: var(--primary-text-color);
     font-weight: 700;
     line-height: 1.66; /* 166.667% */
+}
+
+/* About */
+.about {
+    padding-top: 14rem;
+}
+.about-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-greeting {
+    display: flex;
+    column-gap: 0.9rem;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.about-greeting__text {
+    margin: 0;
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 1.25; /* 125% */
+    letter-spacing: -0.128rem;
+    color: var(--primary-color);
+}
+
+.about__heading {
+    font-size: 5.6rem;
+    font-weight: 500;
+    line-height: 1.17; /* 117.857% */
+    letter-spacing: -0.224rem;
+    color: var(--primary-text-color);
+}
+
+.about__desc {
+    margin-bottom: 7rem;
+    width: 57rem;
+    font-size: 1.8rem;
+    line-height: 1.66; /* 166.667% */
+    color: var(--primary-desc-color);
+}
+
+.about-content {
+    position: relative;
+}
+
+.about-content::after,
+.about-content::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 11.2rem;
+    right: 11.2rem;
+    height: 0.2rem;
+    background: currentColor;
+    opacity: 0.2;
+}
+
+.about-content::before {
+    top: -2rem;
+}
+
+.about-content::after {
+    bottom: -2rem;
+}
+.about-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+    overflow: hidden;
+}
+
+.about-item__stats,
+.about-item__desc {
+    margin: 0;
+}
+
+.about-item__stats {
+    position: relative;
+    font-size: 5.6rem;
+    font-weight: 500;
+    line-height: 1.35; /* 135.714% */
+    letter-spacing: 0.168rem;
+    color: #080415;
+}
+.about-item__stats::after {
+    content: "";
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 0.3rem;
+    background: currentColor;
+}
+
+.about-item__desc {
+    font-size: 1.8rem;
+    line-height: 1.66; /* 166.667% */
+    color: var(--primary-desc-color);
+}
+
+.about-video-wrapper {
+    position: relative;
+    padding-bottom: 53.67%;
+    background: #ccc;
+    height: 0;
+    margin-top: 7rem;
+}
+
+.about-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Feedback */
+
+.feedback {
+    padding: 15rem 0 7.4rem;
+}
+
+.feedback__heading {
+    font-size: 5.6rem;
+    font-weight: 500;
+    line-height: 1.17; /* 117.857% */
+    letter-spacing: -0.224rem;
+    color: var(--primary-text-color);
+}
+
+.feedback__desc {
+    margin: 2rem auto 6rem;
+    width: 57rem;
+    font-size: 1.8rem;
+    line-height: 1.66; /* 166.667% */
+    color: var(--primary-desc-color);
+}
+
+.feedback-list{
+    flex-wrap: nowrap;
+    overflow: hidden;
+    /* transform: translateX(-100%); */
+}
+
+.feeback-item__text {
+    margin: 0 auto 3.6rem;
+    width: 67.9rem;
+    text-align: center;
+    font-size: 2.4rem;
+    line-height: 4rem; /* 166.667% */
+    color: #51586a;
+}
+
+.feedback-item__cus-thumb {
+    width: 4rem;
+    height: 4rem;
+    background: orange;
+    border-radius: 50%;
+}
+
+.feedback-item__cus-info-row {
+    display: flex;
+    justify-content: center;
+    column-gap: 1.5rem;
+    margin: auto;
+}
+
+.feedback-item__cus-img {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-fit: cover;
+    object-position: top left;
+}
+
+.feedhack-item__cus-name {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.333; /* 133.333% */
+    color: #080415;
+}
+
+.feedback-item__cus-desc {
+    margin-top: 0.3rem;
+    font-size: 1.6rem;
+    line-height: 1.81; /* 181.25% */
+    color: var(--primary-desc-color);
+}
+
+.dot-navigator {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.5rem;
+}
+
+.dot {
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    opacity: 0.2;
+    background: var(--primary-text-color);
+    transition-property: width height outline-color;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
+
+.active-dot {
+    transform-origin: center center;
+    width: 1.1rem;
+    height: 1.1rem;
+    background: var(--primary-color);
+    outline: var(--primary-color) solid 0.1rem;
+    outline-offset: 0.3rem;
+    opacity: 1;
 }
