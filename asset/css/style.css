@@ -71,13 +71,12 @@ body {
 
 .logo__text {
     width: 20.2rem;
-    color: #080415;
-    font-family: DM Sans;
     font-size: 2.2rem;
     font-style: normal;
     font-weight: 500;
-    line-height: 3rem; /* 136.364% */
+    line-height: 1.36; /* 136.364% */
     text-decoration-line: underline;
+    color: var(--primary-text-color);
 }
 
 .header__nav {
@@ -159,7 +158,7 @@ body {
     line-height: 1.66rem; /* 166.667% */
     text-decoration-line: underline;
     text-underline-offset: 3px;
-    color: #080415;
+    color: var(--primary-text-color);
 }
 
 .hero-action {
@@ -250,4 +249,65 @@ body {
 
 .client-logo-col-3 {
     padding: 0.95rem 1.1rem;
+}
+
+/* Service */
+.service {
+    padding-bottom: 14rem;
+}
+.service-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.5rem;
+}
+.service__heading {
+    font-size: 5.6rem;
+    font-weight: 500;
+    line-height: 1.17; /* 117.857% */
+    letter-spacing: -0.224rem;
+    color: var(--primary-text-color);
+}
+
+.service__desc {
+    width: 53.4rem;
+    font-size: 1.8rem;
+    line-height: 3rem; /* 166.667% */
+    color: var(--primary-desc-color);
+}
+
+.service-list {
+    margin-top: 6rem;
+}
+
+.service-item {
+    padding: 3.3rem 4.2rem 3.2rem 4.3rem;
+    background: #fbfaff;
+    transition: transform 0.25s;
+}
+
+.service-item:hover {
+    transform: translateY(-1rem);
+}
+
+.service-item__decor {
+    padding-bottom: 2.2rem;
+    width: 7.4rem;
+    height: 7.4rem;
+    object-fit: cover;
+}
+
+.service-item__heading {
+    padding-bottom: 1.5rem;
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 1.25; /* 125% */
+    letter-spacing: -0.128rem;
+    color: var(--primary-text-color);
+}
+
+.service-item__desc {
+    font-size: 1.8rem;
+    line-height: 1.66; /* 166.667% */
+    color: var(--primary-desc-color);
 }
