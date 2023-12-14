@@ -11,6 +11,7 @@
 html,
 body {
     /* overflow-x: clip; */
+    overscroll-behavior: none;
 }
 html {
     overflow: overlay;
@@ -118,7 +119,7 @@ input {
 
 .menu-mobile {
     position: fixed;
-    inset: 0 40% 0 0;
+    inset: 0 0 0 40%;
     display: flex;
     flex-direction: column;
     row-gap: 3rem;
@@ -126,8 +127,10 @@ input {
     z-index: 101;
     background: #fff;
     box-shadow: 23px 0px 36px 0px rgba(0, 0, 0, 0.1);
-    transform: translateX(-100%);
-    transition: transform 0.25s ease;
+    transform: translateX(100%);
+    visibility: hidden;
+    transition-property: transform visibility;
+    transition: 0.25s ease;
 }
 
 .menu-drawer-emoji {
@@ -142,6 +145,7 @@ input {
 }
 .header-on-mobile:has(#menu-drawer-input:checked) .menu-mobile {
     transform: translateX(0);
+    visibility: visible;
 }
 
 /* Header */
@@ -150,9 +154,9 @@ input {
     padding-top: 1rem;
     position: sticky;
     z-index: 99;
-    top: -0.5rem;
+    top: -1.5rem;
     background: rgba(251, 250, 255, 0.3);
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(25px);
 }
 
 .header-inner {
@@ -362,6 +366,8 @@ input {
     display: flex;
     align-items: center;
     column-gap: 1.3rem;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .client-name {
@@ -502,6 +508,7 @@ input {
     line-height: 1.25; /* 125% */
     letter-spacing: -0.128rem;
     color: var(--primary-text-color);
+    cursor: pointer;
 }
 
 .project-item__desc {
@@ -883,6 +890,7 @@ input {
     border: 2px solid rgba(22, 26, 28, 0.2);
     overflow: hidden;
     transition: justify-content 0.25s ease;
+    cursor: pointer;
 }
 
 /* Gallery */
